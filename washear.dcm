@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: Mon 24 Aug 2015 03:25:46 PM EEST
+EESchema-DOCLIB  Version 2.0  Date: Sat 24 Oct 2015 02:07:09 PM EEST
 #
 $CMP OP-27
 D Low Noise Operational Amplifier
@@ -6,6 +6,15 @@ $ENDCMP
 #
 $CMP PZ
 D Pizeoelectric sensor
+$ENDCMP
+#
+$CMP TLC27L2
+D Quad Op amp.
+K AmpliOp
+$ENDCMP
+#
+$CMP TLC555
+F ns/lm555.pdf
 $ENDCMP
 #
 #End Doc Library
