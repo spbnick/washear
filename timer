@@ -1,0 +1,38 @@
+#!/usr/bin/bc -ql
+#
+# Calculate blinking timer circuit parameters
+#
+
+#
+# Input
+#
+# Timing capacitor value, F
+c_t = 0.0000022
+# High output time, s
+t_ch = 1.7 
+# Low output time, s
+t_cl = 0.15
+
+print "Inputs:\n"
+print "Ct:      ", c_t * 10^6, " uF\n"
+print "Tch:     ", t_ch, " s\n"
+print "Tcl:     ", t_cl, " s\n"
+
+#
+# Calculation
+#
+# Rb value, Ohm
+r_b = t_cl / (c_t * l(2))
+# Ra value, Ohm
+r_a = t_ch / (l(2) * c_t) - r_b
+
+#
+# Output
+#
+print "\n"
+print "Outputs:\n"
+print "Ra:      ", r_a / 10^3, " kOhm\n"
+print "Rb:      ", r_b / 10^3, " kOhm\n"
+
+# Stop
+halt
